@@ -11,6 +11,11 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var animationVIew: JKAnimationView!
+    
+    @IBOutlet weak var leftAnimationView: JKAnimationView!
+    
+    @IBOutlet weak var rightAnimationView: JKAnimationView!
+    
     var models = [AnimationModel]()
 
     override func viewDidLoad() {
@@ -24,13 +29,33 @@ class ViewController: UIViewController {
         }
         
         animationVIew.setModel(models[0])
+        leftAnimationView.setModel(models[1])
+        rightAnimationView.setModel(models[2])
     }
 
     @IBAction func changeButtonClicked(_ sender: UIButton) {
+        
         let index = arc4random() % 18 + 1
-        animationVIew.setModel(models[Int(index)])
+        let leftIndex = arc4random() % 18 + 1
+        let rightIndex = arc4random() % 18 + 1
+        
+        leftAnimationView.setModel(models[Int(leftIndex)])
+
+        DispatchAfter(0.1) {
+            self.animationVIew.setModel(self.models[Int(index)])
+        }
+        
+        DispatchAfter(0.2) {
+            self.rightAnimationView.setModel(self.models[Int(rightIndex)])
+        }
     }
     
+    
+    func DispatchAfter(_ seconds:Double, block: @escaping (Void) -> Void) -> Void {
+        let time = DispatchTime.now() + Double(Int64(seconds * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+        DispatchQueue.main.asyncAfter(deadline: time, execute: block)
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
