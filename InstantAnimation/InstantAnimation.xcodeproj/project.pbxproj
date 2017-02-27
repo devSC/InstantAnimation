@@ -13,6 +13,8 @@
 		C8046F5A1E643821000F2D87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8046F591E643821000F2D87 /* Assets.xcassets */; };
 		C8046F5D1E643821000F2D87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8046F5B1E643821000F2D87 /* LaunchScreen.storyboard */; };
 		C8046F681E643821000F2D87 /* InstantAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8046F671E643821000F2D87 /* InstantAnimationTests.swift */; };
+		FEDE12381E647EFD0060A00F /* JKAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDE12371E647EFD0060A00F /* JKAnimationView.swift */; };
+		FEDE123A1E647F130060A00F /* JKAnimationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDE12391E647F130060A00F /* JKAnimationModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		C8046F631E643821000F2D87 /* InstantAnimationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstantAnimationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8046F671E643821000F2D87 /* InstantAnimationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstantAnimationTests.swift; sourceTree = "<group>"; };
 		C8046F691E643821000F2D87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEDE12371E647EFD0060A00F /* JKAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JKAnimationView.swift; sourceTree = "<group>"; };
+		FEDE12391E647F130060A00F /* JKAnimationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JKAnimationModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 			children = (
 				C8046F521E643821000F2D87 /* AppDelegate.swift */,
 				C8046F541E643821000F2D87 /* ViewController.swift */,
+				FEDE12371E647EFD0060A00F /* JKAnimationView.swift */,
+				FEDE12391E647F130060A00F /* JKAnimationModel.swift */,
 				C8046F561E643821000F2D87 /* Main.storyboard */,
 				C8046F591E643821000F2D87 /* Assets.xcassets */,
 				C8046F5B1E643821000F2D87 /* LaunchScreen.storyboard */,
@@ -201,8 +207,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEDE12381E647EFD0060A00F /* JKAnimationView.swift in Sources */,
 				C8046F551E643821000F2D87 /* ViewController.swift in Sources */,
 				C8046F531E643821000F2D87 /* AppDelegate.swift in Sources */,
+				FEDE123A1E647F130060A00F /* JKAnimationModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +418,7 @@
 				C8046F6E1E643821000F2D87 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C8046F6F1E643821000F2D87 /* Build configuration list for PBXNativeTarget "InstantAnimationTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +427,7 @@
 				C8046F711E643821000F2D87 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
